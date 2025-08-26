@@ -1,0 +1,811 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "fc1eb171",
+   "metadata": {
+    "papermill": {
+     "duration": 0.004932,
+     "end_time": "2025-08-26T14:30:46.854390",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.849458",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "# Getting Started with Basic Python Libraries"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d7faa830",
+   "metadata": {
+    "papermill": {
+     "duration": 0.003937,
+     "end_time": "2025-08-26T14:30:46.863571",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.859634",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "### Purpose\n",
+    "\n",
+    "Provide a basic introduction to Python's basic libraries, such as numpy, pandas, matplotlib, and seaborn, highlighting their key functions and use to python applications.\n",
+    "\n",
+    "---\n",
+    "\n",
+    "### Content\n",
+    "\n",
+    "1. Numpy Library\n",
+    "2. Pandas Library\n",
+    "3. Matplotlib Library\n",
+    "4. Seaborn Library"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2d27757e",
+   "metadata": {
+    "papermill": {
+     "duration": 0.003472,
+     "end_time": "2025-08-26T14:30:46.871485",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.868013",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## Numpy Library\n",
+    "\n",
+    "**NumPy**, short for *Numerical Python*, is a powerful and foundation library for scientific computing and numerical analysis in Python. It provides efficient data structures alongside highly optimized mathematical functions design to operate on these data strucutures. \n",
+    "\n",
+    "It was designed to efficiently hangle large volumes of data, serving as a foundation for many advanced libraries suc as **Pandas**, **scikit-learn** and others.\n",
+    "\n",
+    "---\n",
+    "\n",
+    "## Import NumPy Library\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "982a62d8",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:46.880471Z",
+     "iopub.status.busy": "2025-08-26T14:30:46.880131Z",
+     "iopub.status.idle": "2025-08-26T14:30:46.891093Z",
+     "shell.execute_reply": "2025-08-26T14:30:46.889699Z"
+    },
+    "papermill": {
+     "duration": 0.018028,
+     "end_time": "2025-08-26T14:30:46.893199",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.875171",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "134568ee",
+   "metadata": {
+    "papermill": {
+     "duration": 0.003538,
+     "end_time": "2025-08-26T14:30:46.901625",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.898087",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## NumPy Features\n",
+    "\n",
+    "\n",
+    "\n",
+    "1. **Linear Algebra**\n",
+    "\n",
+    "    *NumPy's Linear Algebra tools* make it easy to work with matrices, supporting operations like multiplication, determinant calculation, and matrix inversion. You can also solve equations and understand key matrix properties like eigenvalues.\n",
+    "   \n",
+    "2. **Statistic**\n",
+    "\n",
+    "    *NumPy's Statistics tools* simplify data analysis by providing functions to calculate common metrics, including mean, median, variance, and standard deviation. These functions help developers summarize and understand datasets quickly, making NumPy highly useful for data analysis and learning statistics.\n",
+    "\n",
+    "3. **Data Manipulation**\n",
+    "\n",
+    "    *NumPy's Data Manipulation tools* allow developers to effortlessly reshape arrays, combine or split data, and access specific parts of arrays using indexing and slicing. These features make organizing and adjusting large datasets straightforward and efficient.\n",
+    "\n",
+    "4. **N-dimensional Arrays** \n",
+    "\n",
+    "    *NumPy's N-dimensional Arrays* are versatile tools for storing and working with data in multiple dimensions, such as lists or tables. They are fast, easy to use, and optimized for mathematical operations, making them ideal for exploring structured data and performing calculations.\n",
+    "\n",
+    "5. **Arrays**\n",
+    "\n",
+    "   *NumPy's Mathematical Operations* enable developers to carry out calculations like addition, multiplication, and more directly on arrays without needing loops. This approach is fast, efficient, and simplifies handling large datasets in Python.\n",
+    "\n",
+    "---\n",
+    "\n",
+    "## Exploring NumPy Features"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "d35cc686",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:46.910597Z",
+     "iopub.status.busy": "2025-08-26T14:30:46.910088Z",
+     "iopub.status.idle": "2025-08-26T14:30:46.917477Z",
+     "shell.execute_reply": "2025-08-26T14:30:46.916313Z"
+    },
+    "papermill": {
+     "duration": 0.014275,
+     "end_time": "2025-08-26T14:30:46.919617",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.905342",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Creating a list using native modules of the Python Standard Library\n",
+    "import random\n",
+    "\n",
+    "salary_list = [random.randint(5000, 10000) for _ in range(1_000)] # Create a list of 1.000 salaries ranging from 5.000 to 10.000 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "4e3539d1",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:46.929998Z",
+     "iopub.status.busy": "2025-08-26T14:30:46.929576Z",
+     "iopub.status.idle": "2025-08-26T14:30:47.325947Z",
+     "shell.execute_reply": "2025-08-26T14:30:47.324427Z"
+    },
+    "papermill": {
+     "duration": 0.404117,
+     "end_time": "2025-08-26T14:30:47.328499",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:46.924382",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Avereage Salary (Statistics): 7537.49 - Execution Time:  0.23s\n",
+      "Avereage Salary (NumPy): 7537.49 - Execution Time:  0.15s\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Comparing the execution time for calculating the average salaries using the statistics module and the mean function from the NumPy library\n",
+    "import statistics\n",
+    "from timeit import timeit\n",
+    "\n",
+    "time_statistics = timeit(lambda: statistics.mean(salary_list), number = 1000)\n",
+    "print(f\"Avereage Salary (Statistics): {statistics.mean(salary_list)} - Execution Time: {time_statistics: .2f}s\") \n",
+    "\n",
+    "time_mean = timeit(lambda: np.mean(salary_list), number = 1000)\n",
+    "print(f\"Avereage Salary (NumPy): {np.mean(salary_list)} - Execution Time: {time_mean: .2f}s\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c3b78d0d",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:47.337973Z",
+     "iopub.status.busy": "2025-08-26T14:30:47.337568Z",
+     "iopub.status.idle": "2025-08-26T14:30:47.347081Z",
+     "shell.execute_reply": "2025-08-26T14:30:47.345260Z"
+    },
+    "papermill": {
+     "duration": 0.016447,
+     "end_time": "2025-08-26T14:30:47.348886",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:47.332439",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Total salaries: [ 63000.  88000.  81000. 100800.  45000.]\n",
+      "Average salary: $75560.00\n"
+     ]
+    }
+   ],
+   "source": [
+    "# One more example of numpy features\n",
+    "job_titles = np.array(['Data Analyst', 'Data Scientist', 'Data Engineer', 'Machine Learning Engineer', 'AI Engineer']) # Creating an array with Job Titles\n",
+    "base_salaries = np.array([60000, 80000, 75000, 90000, 45000]) # Creating an array with Base Salaries\n",
+    "bonus_rates = np.array([.05, .1, .08, .12, 0]) # Creating an array with Bonus Rates\n",
+    "\n",
+    "total_salaries = base_salaries * (1 + bonus_rates) # Calculating the salaries according to the bonus rates\n",
+    "print(\"Total salaries:\", total_salaries)\n",
+    "\n",
+    "average_salary = np.mean(total_salaries) # Calculating the average salary\n",
+    "print(f\"Average salary: ${average_salary:.2f}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a8b9ed70",
+   "metadata": {
+    "papermill": {
+     "duration": 0.003381,
+     "end_time": "2025-08-26T14:30:47.357533",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:47.354152",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## Pandas Library\n",
+    "\n",
+    "**Pandas**, short for *Python Data Analysis*, is a powerful and flexible library for data manipulation and analysis. It provides high-performance, easy-to-use data structures like **Series** and **DataFrames**, enabling effective handling, organization, and analysis of structured datasets. \n",
+    "\n",
+    "Pandas is widely used for tasks involving data cleaning, transformation, and visualization, making it essential for anyone working in data science or related fields.\n",
+    "\n",
+    "---\n",
+    "\n",
+    "## Import Pandas Library"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "1fed5c55",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:47.368164Z",
+     "iopub.status.busy": "2025-08-26T14:30:47.366611Z",
+     "iopub.status.idle": "2025-08-26T14:30:49.732749Z",
+     "shell.execute_reply": "2025-08-26T14:30:49.731264Z"
+    },
+    "papermill": {
+     "duration": 2.373276,
+     "end_time": "2025-08-26T14:30:49.735038",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:47.361762",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "191f449a",
+   "metadata": {
+    "papermill": {
+     "duration": 0.003714,
+     "end_time": "2025-08-26T14:30:49.744828",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:49.741114",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## Pandas Features\n",
+    "\n",
+    "1. **DataFrames**\n",
+    "\n",
+    "    *Pandas DataFrames* are two-dimensional, tabular data structures (similar to Excel spreadsheets or SQL tables). DataFrames allow developers to store and manipulate labeled data efficiently.\n",
+    "   \n",
+    "2. **Series**\n",
+    "\n",
+    "    *Pandas Series* are one-dimensional data structures akin to a column in a DataFrame. It supports array-like operations and can store heterogeneous data types.\n",
+    "\n",
+    "3. **Data Manipulation**\n",
+    "\n",
+    "    *Pandas Data Manipulation* simplify transforming and reshaping data. You can filter rows, slice columns, merge datasets, and handle missing values with ease, making it ideal for cleaning and preparing datasets.\n",
+    "\n",
+    "4. **Data Cleaning** \n",
+    "\n",
+    "    *Pandas Data Cleaning* are designed to handle incomplete or noisy datasets. With functions for filling missing values, dropping duplicates, and handling null values, Pandas helps to ensure data quality and consistency.\n",
+    "\n",
+    "5. **Pandas Aggregation and Grouping**\n",
+    "\n",
+    "   *Pandas Aggregation and Grouping* enable summarizing large datasets by grouping rows or columns based on specific criteria. You can calculate metrics like sum, mean, or count, making it easier to analyze trends and patterns.\n",
+    "\n",
+    "---\n",
+    "\n",
+    "## Exploring Pandas Features\n",
+    "\n",
+    "### Inspection DataFrame"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "fb5c2196",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:49.753469Z",
+     "iopub.status.busy": "2025-08-26T14:30:49.753042Z",
+     "iopub.status.idle": "2025-08-26T14:30:49.942295Z",
+     "shell.execute_reply": "2025-08-26T14:30:49.940634Z"
+    },
+    "papermill": {
+     "duration": 0.196084,
+     "end_time": "2025-08-26T14:30:49.944523",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:49.748439",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Show_Id</th>\n",
+       "      <th>Category</th>\n",
+       "      <th>Title</th>\n",
+       "      <th>Director</th>\n",
+       "      <th>Cast</th>\n",
+       "      <th>Country</th>\n",
+       "      <th>Release_Date</th>\n",
+       "      <th>Rating</th>\n",
+       "      <th>Duration</th>\n",
+       "      <th>Type</th>\n",
+       "      <th>Description</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>s1</td>\n",
+       "      <td>TV Show</td>\n",
+       "      <td>3%</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>João Miguel, Bianca Comparato, Michel Gomes, R...</td>\n",
+       "      <td>Brazil</td>\n",
+       "      <td>August 14, 2020</td>\n",
+       "      <td>TV-MA</td>\n",
+       "      <td>4 Seasons</td>\n",
+       "      <td>International TV Shows, TV Dramas, TV Sci-Fi &amp;...</td>\n",
+       "      <td>In a future where the elite inhabit an island ...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>s2</td>\n",
+       "      <td>Movie</td>\n",
+       "      <td>07:19</td>\n",
+       "      <td>Jorge Michel Grau</td>\n",
+       "      <td>Demián Bichir, Héctor Bonilla, Oscar Serrano, ...</td>\n",
+       "      <td>Mexico</td>\n",
+       "      <td>December 23, 2016</td>\n",
+       "      <td>TV-MA</td>\n",
+       "      <td>93 min</td>\n",
+       "      <td>Dramas, International Movies</td>\n",
+       "      <td>After a devastating earthquake hits Mexico Cit...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>s3</td>\n",
+       "      <td>Movie</td>\n",
+       "      <td>23:59</td>\n",
+       "      <td>Gilbert Chan</td>\n",
+       "      <td>Tedd Chan, Stella Chung, Henley Hii, Lawrence ...</td>\n",
+       "      <td>Singapore</td>\n",
+       "      <td>December 20, 2018</td>\n",
+       "      <td>R</td>\n",
+       "      <td>78 min</td>\n",
+       "      <td>Horror Movies, International Movies</td>\n",
+       "      <td>When an army recruit is found dead, his fellow...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>s4</td>\n",
+       "      <td>Movie</td>\n",
+       "      <td>9</td>\n",
+       "      <td>Shane Acker</td>\n",
+       "      <td>Elijah Wood, John C. Reilly, Jennifer Connelly...</td>\n",
+       "      <td>United States</td>\n",
+       "      <td>November 16, 2017</td>\n",
+       "      <td>PG-13</td>\n",
+       "      <td>80 min</td>\n",
+       "      <td>Action &amp; Adventure, Independent Movies, Sci-Fi...</td>\n",
+       "      <td>In a postapocalyptic world, rag-doll robots hi...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>s5</td>\n",
+       "      <td>Movie</td>\n",
+       "      <td>21</td>\n",
+       "      <td>Robert Luketic</td>\n",
+       "      <td>Jim Sturgess, Kevin Spacey, Kate Bosworth, Aar...</td>\n",
+       "      <td>United States</td>\n",
+       "      <td>January 1, 2020</td>\n",
+       "      <td>PG-13</td>\n",
+       "      <td>123 min</td>\n",
+       "      <td>Dramas</td>\n",
+       "      <td>A brilliant group of students become card-coun...</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "  Show_Id Category  Title           Director  \\\n",
+       "0      s1  TV Show     3%                NaN   \n",
+       "1      s2    Movie  07:19  Jorge Michel Grau   \n",
+       "2      s3    Movie  23:59       Gilbert Chan   \n",
+       "3      s4    Movie      9        Shane Acker   \n",
+       "4      s5    Movie     21     Robert Luketic   \n",
+       "\n",
+       "                                                Cast        Country  \\\n",
+       "0  João Miguel, Bianca Comparato, Michel Gomes, R...         Brazil   \n",
+       "1  Demián Bichir, Héctor Bonilla, Oscar Serrano, ...         Mexico   \n",
+       "2  Tedd Chan, Stella Chung, Henley Hii, Lawrence ...      Singapore   \n",
+       "3  Elijah Wood, John C. Reilly, Jennifer Connelly...  United States   \n",
+       "4  Jim Sturgess, Kevin Spacey, Kate Bosworth, Aar...  United States   \n",
+       "\n",
+       "        Release_Date Rating   Duration  \\\n",
+       "0    August 14, 2020  TV-MA  4 Seasons   \n",
+       "1  December 23, 2016  TV-MA     93 min   \n",
+       "2  December 20, 2018      R     78 min   \n",
+       "3  November 16, 2017  PG-13     80 min   \n",
+       "4    January 1, 2020  PG-13    123 min   \n",
+       "\n",
+       "                                                Type  \\\n",
+       "0  International TV Shows, TV Dramas, TV Sci-Fi &...   \n",
+       "1                       Dramas, International Movies   \n",
+       "2                Horror Movies, International Movies   \n",
+       "3  Action & Adventure, Independent Movies, Sci-Fi...   \n",
+       "4                                             Dramas   \n",
+       "\n",
+       "                                         Description  \n",
+       "0  In a future where the elite inhabit an island ...  \n",
+       "1  After a devastating earthquake hits Mexico Cit...  \n",
+       "2  When an army recruit is found dead, his fellow...  \n",
+       "3  In a postapocalyptic world, rag-doll robots hi...  \n",
+       "4  A brilliant group of students become card-coun...  "
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "netflix_data = pd.read_csv('../input/netflix-data/Netflix Dataset.csv') # Creating a DataFrame\n",
+    "netflix_data.head() #Showing the five first lines"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "0237d458",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:49.956112Z",
+     "iopub.status.busy": "2025-08-26T14:30:49.955673Z",
+     "iopub.status.idle": "2025-08-26T14:30:49.998970Z",
+     "shell.execute_reply": "2025-08-26T14:30:49.997120Z"
+    },
+    "papermill": {
+     "duration": 0.051841,
+     "end_time": "2025-08-26T14:30:50.000797",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:49.948956",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 7789 entries, 0 to 7788\n",
+      "Data columns (total 11 columns):\n",
+      " #   Column        Non-Null Count  Dtype \n",
+      "---  ------        --------------  ----- \n",
+      " 0   Show_Id       7789 non-null   object\n",
+      " 1   Category      7789 non-null   object\n",
+      " 2   Title         7789 non-null   object\n",
+      " 3   Director      5401 non-null   object\n",
+      " 4   Cast          7071 non-null   object\n",
+      " 5   Country       7282 non-null   object\n",
+      " 6   Release_Date  7779 non-null   object\n",
+      " 7   Rating        7782 non-null   object\n",
+      " 8   Duration      7789 non-null   object\n",
+      " 9   Type          7789 non-null   object\n",
+      " 10  Description   7789 non-null   object\n",
+      "dtypes: object(11)\n",
+      "memory usage: 669.5+ KB\n"
+     ]
+    }
+   ],
+   "source": [
+    "netflix_data.info() # Showing all columns and Non-Null count cells"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "4e681b7a",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:50.010796Z",
+     "iopub.status.busy": "2025-08-26T14:30:50.010430Z",
+     "iopub.status.idle": "2025-08-26T14:30:50.017147Z",
+     "shell.execute_reply": "2025-08-26T14:30:50.015554Z"
+    },
+    "papermill": {
+     "duration": 0.013715,
+     "end_time": "2025-08-26T14:30:50.018934",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:50.005219",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of Rows: 7789\n",
+      "Number of Columns: 11\n",
+      "Total Size: 85679\n",
+      "DataFrame Columns: ['Show_Id', 'Category', 'Title', 'Director', 'Cast', 'Country', 'Release_Date', 'Rating', 'Duration', 'Type', 'Description']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Know more about the DataFrame\n",
+    "print(f\"Number of Rows: {netflix_data.shape[0]}\") # Rows number\n",
+    "print(f\"Number of Columns: {netflix_data.shape[1]}\") # Columns number\n",
+    "print(f\"Total Size: {netflix_data.size}\") # (Total of Cells) DataFrame Size\n",
+    "print(f\"DataFrame Columns: {netflix_data.columns.tolist()}\") # Showing the DataFrame Columns"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "2ea9b867",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:50.030042Z",
+     "iopub.status.busy": "2025-08-26T14:30:50.028711Z",
+     "iopub.status.idle": "2025-08-26T14:30:50.036771Z",
+     "shell.execute_reply": "2025-08-26T14:30:50.035443Z"
+    },
+    "papermill": {
+     "duration": 0.016273,
+     "end_time": "2025-08-26T14:30:50.039429",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:50.023156",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'May 11, 2018'"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Selecting a specific value in a specific index\n",
+    "netflix_data.Release_Date[7000]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "23907c39",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:50.050010Z",
+     "iopub.status.busy": "2025-08-26T14:30:50.049628Z",
+     "iopub.status.idle": "2025-08-26T14:30:50.059155Z",
+     "shell.execute_reply": "2025-08-26T14:30:50.057772Z"
+    },
+    "papermill": {
+     "duration": 0.017027,
+     "end_time": "2025-08-26T14:30:50.061489",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:50.044462",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array(['TV Show', 'Movie'], dtype=object)"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Showing unique values for Category Column\n",
+    "netflix_data.Category.unique()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "05f6423b",
+   "metadata": {
+    "papermill": {
+     "duration": 0.00383,
+     "end_time": "2025-08-26T14:30:50.069722",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:50.065892",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "### Cleaning DataFrame"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "aff4be34",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-08-26T14:30:50.079589Z",
+     "iopub.status.busy": "2025-08-26T14:30:50.079230Z",
+     "iopub.status.idle": "2025-08-26T14:30:50.091124Z",
+     "shell.execute_reply": "2025-08-26T14:30:50.089416Z"
+    },
+    "papermill": {
+     "duration": 0.019449,
+     "end_time": "2025-08-26T14:30:50.093301",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:50.073852",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Unknown'"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Replace NaN values in Director Column to 'Unknown'\n",
+    "netflix_data['Director'] = netflix_data['Director'].fillna('Unknown')\n",
+    "netflix_data.Director[0]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "15726fe3",
+   "metadata": {
+    "papermill": {
+     "duration": 0.0041,
+     "end_time": "2025-08-26T14:30:50.102538",
+     "exception": false,
+     "start_time": "2025-08-26T14:30:50.098438",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "Content created based on *Python for Data Analytics - Full Course for Beginners* by **Luke Barousse**"
+   ]
+  }
+ ],
+ "metadata": {
+  "kaggle": {
+   "accelerator": "none",
+   "dataSources": [
+    {
+     "datasetId": 8144567,
+     "sourceId": 12874859,
+     "sourceType": "datasetVersion"
+    }
+   ],
+   "dockerImageVersionId": 31089,
+   "isGpuEnabled": false,
+   "isInternetEnabled": true,
+   "language": "python",
+   "sourceType": "notebook"
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.13"
+  },
+  "papermill": {
+   "default_parameters": {},
+   "duration": 11.071505,
+   "end_time": "2025-08-26T14:30:50.729188",
+   "environment_variables": {},
+   "exception": null,
+   "input_path": "__notebook__.ipynb",
+   "output_path": "__notebook__.ipynb",
+   "parameters": {},
+   "start_time": "2025-08-26T14:30:39.657683",
+   "version": "2.6.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
